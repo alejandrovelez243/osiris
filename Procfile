@@ -1,0 +1,1 @@
+web: gunicorn Osiris.wsgi --log-file -

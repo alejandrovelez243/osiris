@@ -1,0 +1,92 @@
+{% extends "Base/base.html" %} {% load static %} {% block content %}
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            {% csrf_token %}
+            <div class="col-md-12">
+                <div class="card ">
+                    <div class="card-header card-header-primary card-header-text">
+                        <div class="card-text">
+                            <h4 class="card-title">Editar Empleado</h4>
+                        </div>
+                    </div>
+                    <div class="card-body ">
+                        <form method="post" class="form-horizontal">
+                            {% csrf_token %}
+                            <div class="row">
+                                <label class="col-sm-2 col-form-label">Nombre Usuario</label>
+                                <div class="col-sm-10">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" value="{{ form2.username.value}}" name="username" maxlength="150" autofocus="" required="" id="id_username">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-2 col-form-label">Nombres</label>
+                                <div class="col-sm-10">
+                                    <div class="form-group">
+                                        <input type="text" name="first_name" value="{{ form2.first_name.value}}" class="form-control" maxlength="30" id="id_first_name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-2 col-form-label">Apellidos</label>
+                                <div class="col-sm-10">
+                                    <div class="form-group">
+                                        <input type="text" name="last_name" value="{{ form2.last_name.value}}" class="form-control" maxlength="30" id="id_last_name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-2 col-form-label">Documento</label>
+                                <div class="col-sm-10">
+                                    <div class="form-group">
+                                        {{ form.documento}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-2 col-form-label">Correo</label>
+                                <div class="col-sm-10">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" value="{{ form2.email.value}}" name="email" maxlength="254" id="id_email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-2 col-form-label">Contraseña</label>
+                                <div class="col-sm-10">
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" name="password1" required="" id="id_password1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-2 col-form-label">Confirmar Conraseña</label>
+                                <div class="col-sm-10">
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" name="password2" required="" id="id_password2">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-2 col-form-label">Punto Control</label>
+                                <div class="col-sm-10">
+                                    <div class="form-group">
+                                        {{ form.punto_control}}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-footer ">
+                                <button type="submit" class="btn btn-fill btn-primary">Editar</button>
+                                <a href="/empleado/" class="btn btn-fill btn-danger">Cancelar</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>{% endblock content %}
