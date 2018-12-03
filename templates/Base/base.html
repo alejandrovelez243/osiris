@@ -116,13 +116,13 @@
                         <div class="collapse" id="empresas">
                             <ul class="nav">
                                 <li class="nav-item {% if request.path == '/empresa/' %} active {% endif %}">
-                                    <a class="nav-link" href="esa_ver' %}">
+                                    <a class="nav-link" href="">
                                         <span class="sidebar-mini"> V </span>
                                         <span class="sidebar-normal"> Ver </span>
                                     </a>
                                 </li>
                                 <li class="nav-item {% if request.path == '/empresa/crear/' %} active {% endif %}">
-                                    <a class="nav-link" href="esa_crear' %}">
+                                    <a class="nav-link" href="">
                                         <span class="sidebar-mini"> C </span>
                                         <span class="sidebar-normal"> Crear </span>
                                     </a>
@@ -131,22 +131,46 @@
                         </div>
                     </li>
                     <li class="nav-item {% if request.path == '/punto_control/crear/' or request.path == '/punto_control/' %} active {% endif %}">
-                        <a class="nav-link" data-toggle="collapse" href="#puntos_control">
-                            <i class="material-icons">add_location</i>
-                            <p> Puntos Control
+                        <a class="nav-link" data-toggle="collapse" href="#inventario">
+                            <i class="material-icons">assignment</i>
+                            <p> Inventario
                                 <b class="caret"></b>
                             </p>
                         </a>
-                        <div class="collapse" id="puntos_control">
+                        <div class="collapse" id="inventario">
                             <ul class="nav">
                                 <li class="nav-item {% if request.path == '/punto_control/' %} active {% endif %}">
-                                    <a class="nav-link" href="oControl_ver' %}">
+                                    <a class="nav-link" href="">
                                         <span class="sidebar-mini"> V </span>
                                         <span class="sidebar-normal"> Ver </span>
                                     </a>
                                 </li>
                                 <li class="nav-item {% if request.path == '/punto_control/crear/' %} active {% endif %}">
-                                    <a class="nav-link" href="oControl_crear' %}">
+                                    <a class="nav-link" href="">
+                                        <span class="sidebar-mini"> C </span>
+                                        <span class="sidebar-normal"> Crear </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item {% if request.path == '/punto_control/crear/' or request.path == '/punto_control/' %} active {% endif %}">
+                        <a class="nav-link" data-toggle="collapse" href="#producto">
+                            <i class="material-icons">inbox</i>
+                            <p> Productos
+                                <b class="caret"></b>
+                            </p>
+                        </a>
+                        <div class="collapse" id="producto">
+                            <ul class="nav">
+                                <li class="nav-item {% if request.path == '/punto_control/' %} active {% endif %}">
+                                    <a class="nav-link" href="">
+                                        <span class="sidebar-mini"> V </span>
+                                        <span class="sidebar-normal"> Ver </span>
+                                    </a>
+                                </li>
+                                <li class="nav-item {% if request.path == '/punto_control/crear/' %} active {% endif %}">
+                                    <a class="nav-link" href="">
                                         <span class="sidebar-mini"> C </span>
                                         <span class="sidebar-normal"> Crear </span>
                                     </a>
@@ -156,7 +180,7 @@
                     </li>
                     <li class="nav-item {% if request.path == '/scannMaleta/' %} active {% endif %}">
                         <a class="nav-link" data-toggle="collapse" href="#pedidos">
-                            <i class="material-icons">next_week</i>
+                            <i class="material-icons">add_shopping_cart</i>
                             <p> Pedidos
                                 <b class="caret"></b>
                             </p>
@@ -173,7 +197,7 @@
                         </div>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="">
+                        <a class="nav-link" href="{% url 'logout' %}">
                             <i class="material-icons">exit_to_app</i>
                             <p> Cerrar Sesión </p>
                         </a>
