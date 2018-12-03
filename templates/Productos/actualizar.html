@@ -1,0 +1,28 @@
+{% extends "Base/base.html" %} {% load static %} {% block content %}
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            {% csrf_token %}
+            <div class="col-md-12">
+                <div class="card ">
+                    <div class="card-header card-header-primary card-header-text">
+                        <div class="card-text">
+                            <h4 class="card-title">Editar Empresa</h4>
+                        </div>
+                    </div>
+                    <div class="card-body ">
+                        <form method="post" class="form-horizontal">
+                            {% csrf_token %} {{form.as_p}}
+
+                            <div class="card-footer ">
+                                <button type="submit" class="btn btn-fill btn-primary">Editar</button>
+                                <a href="/empresa/" class="btn btn-fill btn-danger">Cancelar</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>{% endblock content %}

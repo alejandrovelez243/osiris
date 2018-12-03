@@ -47,7 +47,7 @@
                     <div class="user-info">
                         <a data-toggle="collapse" href="#collapseExample" class="username">
                             <span>
-                Admin
+                {{nombre}}
                 <b class="caret"></b>
               </span>
                         </a>
@@ -155,16 +155,16 @@
                         </div>
                     </li>
                     <li class="nav-item {% if request.path == '/scannMaleta/' %} active {% endif %}">
-                        <a class="nav-link" data-toggle="collapse" href="#scann_maleta">
+                        <a class="nav-link" data-toggle="collapse" href="#pedidos">
                             <i class="material-icons">next_week</i>
-                            <p> Scann Maleta
+                            <p> Pedidos
                                 <b class="caret"></b>
                             </p>
                         </a>
-                        <div class="collapse" id="scann_maleta">
+                        <div class="collapse" id="pedidos">
                             <ul class="nav">
                                 <li class="nav-item ">
-                                    <a class="nav-link" href="nMaleta_ver' %}">
+                                    <a class="nav-link" href="">
                                         <span class="sidebar-mini"> V </span>
                                         <span class="sidebar-normal"> Ver </span>
                                     </a>
@@ -173,7 +173,7 @@
                         </div>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="ut' %}">
+                        <a class="nav-link" href="">
                             <i class="material-icons">exit_to_app</i>
                             <p> Cerrar Sesión </p>
                         </a>

@@ -25,7 +25,7 @@ PROJECT_ROOT= Path(__file__).ancestor(2)
 SECRET_KEY = 'iu05b+5q1a8)@gk!lcvm)9kp#(_a59*08x)q%n8=t0x)%ve$ou'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -36,7 +36,7 @@ NON_DJANGO_APPS = [
     'myapps.Empresa',
     'myapps.Informe',
     'myapps.Inventario',
-    'myapps.Login',
+    'myapps.Dashboard',
     'myapps.Pedido',
     'myapps.Productos',
     'myapps.Usuario',
